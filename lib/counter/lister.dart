@@ -21,6 +21,12 @@ class _ItemListingPageState extends State<ItemListingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.pushNamed(context, '/form');
+        },
+        child: const Icon(Icons.edit),
+      ),
       appBar: AppBar(
         title: const Text('Welcome'),
         automaticallyImplyLeading: false,
