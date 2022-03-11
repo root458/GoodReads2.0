@@ -1,6 +1,6 @@
-# Good Reads App
+# Very Good App
 
-An app for readers that showcases bestseller books and allows users to make recommendations for books
+A very good project
 
 ---
 
