@@ -67,14 +67,14 @@ class FormWidget extends StatefulWidget {
 }
 
 class _FormWidgetState extends State<FormWidget> {
+  final _formkey = GlobalKey<FormState>();
+  // Text fields
+  String author = '';
+  String title = '';
+  String year = '';
+
   @override
   Widget build(BuildContext context) {
-    final _formkey = GlobalKey<FormState>();
-    // Text fields
-    var author = '';
-    var title = '';
-    var year = '';
-
     return SizedBox(
       width: MediaQuery.of(widget.pageContext).size.width * .7,
       height: MediaQuery.of(widget.pageContext).size.height * .7,
