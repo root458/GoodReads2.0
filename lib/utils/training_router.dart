@@ -9,6 +9,10 @@ class TrainingRouter {
     // final _args = settings.arguments;
 
     switch (settings.name) {
+      case decisionRoute:
+        return _route(
+          const DecisionPage(),
+        );
       case landingRoute:
         return _route(
           const ItemListingPage(),
