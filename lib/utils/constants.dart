@@ -2,10 +2,12 @@ part of training_utils;
 
 class TrainingValues {
   TrainingValues({
+    required this.authBox,
     required this.baseDomain,
   });
 
   final String baseDomain;
+  final String authBox;
 }
 
 class TrainingConfig {

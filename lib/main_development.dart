@@ -14,6 +14,7 @@ void main() {
   TrainingConfig(
     values: TrainingValues(
       baseDomain: 'https://jsonkeeper.com',
+      authBox: 'training_development',
     ),
   );
   
