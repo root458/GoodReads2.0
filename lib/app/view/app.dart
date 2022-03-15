@@ -27,7 +27,7 @@ class App extends StatelessWidget {
         GlobalMaterialLocalizations.delegate,
       ],
       supportedLocales: AppLocalizations.supportedLocales,
-      initialRoute: TrainingRouter.landingRoute,
+      initialRoute: TrainingRouter.listingRoute,
       onGenerateRoute: TrainingRouter.generateRoute,
     );
   }

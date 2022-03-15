@@ -26,7 +26,6 @@ class _FormPageState extends State<FormPage> {
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
         title: const Text('Speak to us'),
-        automaticallyImplyLeading: false,
       ),
       body: SingleChildScrollView(
         child: Center(

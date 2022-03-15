@@ -29,7 +29,6 @@ class _ItemListingPageState extends State<ItemListingPage> {
       ),
       appBar: AppBar(
         title: const Text('Welcome'),
-        automaticallyImplyLeading: false,
       ),
       body: BlocBuilder<GetBooksCubit, GetBooksState>(
         builder: (BuildContext context, GetBooksState state) {
