@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:good_reads_app/authpages/signin_page.dart';
 import 'package:good_reads_app/counter/lister.dart';
 import 'package:good_reads_app/services/_index.dart';
 import 'package:good_reads_app/utils/_index.dart';
@@ -20,12 +21,10 @@ class DecisionPage extends StatelessWidget {
           if (_accToken != null) {
             return const ItemListingPage();
           } else {
-            // Return Sign in page
-            return const ItemListingPage();
+            return const SignInPage();
           }
         } else {
-          // Return Sign in page
-          return const ItemListingPage();
+          return const SignInPage();
         }
       },
     );
