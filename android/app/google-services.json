@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "748432947705",
+    "project_id": "good-reads-b6f70",
+    "storage_bucket": "good-reads-b6f70.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:748432947705:android:e266fd0069d27dbad9a528",
+        "android_client_info": {
+          "package_name": "com.suis.goodreadsapp.good_reads_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "748432947705-rahal6etl8rfqpc8n16hr1v4tp2r3erq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJAmrAm-Ro7UYrTDQOAVcTbZ-XwpfqgPk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "748432947705-rahal6etl8rfqpc8n16hr1v4tp2r3erq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
