@@ -18,3 +18,4 @@ part 'constants.dart';
 part 'network.dart';
 part 'singletons.dart';
 part 'training_router.dart';
+part 'theming.dart';
