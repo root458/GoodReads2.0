@@ -42,6 +42,7 @@ class AuthServiceImpl implements AuthService {
         UserAuthDTO(
           name: _user.displayName!,
           email: googleSignInAccount!.email,
+          accessToken: googleSignInAuthentication!.accessToken!,
         ),
       );
     } else {

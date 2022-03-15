@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "748432947705-u1upokuq51njkiaru9pvuuhkf62ia7qv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.suis.goodreadsapp.good_reads_app",
+            "certificate_hash": "1c22988efe4c7e8bca7da9ac14f038a54a8bb2cb"
+          }
+        },
+        {
           "client_id": "748432947705-rahal6etl8rfqpc8n16hr1v4tp2r3erq.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -43,6 +51,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "748432947705-u1upokuq51njkiaru9pvuuhkf62ia7qv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.suis.goodreadsapp.good_reads_app.dev",
+            "certificate_hash": "1c22988efe4c7e8bca7da9ac14f038a54a8bb2cb"
+          }
+        },
+        {
           "client_id": "748432947705-rahal6etl8rfqpc8n16hr1v4tp2r3erq.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -71,6 +87,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "748432947705-u1upokuq51njkiaru9pvuuhkf62ia7qv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.suis.goodreadsapp.good_reads_app.stg",
+            "certificate_hash": "1c22988efe4c7e8bca7da9ac14f038a54a8bb2cb"
+          }
+        },
         {
           "client_id": "748432947705-rahal6etl8rfqpc8n16hr1v4tp2r3erq.apps.googleusercontent.com",
           "client_type": 3

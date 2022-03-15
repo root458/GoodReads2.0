@@ -5,6 +5,7 @@ class UserAuthDTO with _$UserAuthDTO {
   factory UserAuthDTO({
     required String name,
     required String email,
+    required String accessToken,
   }) = _UserAuthDTO;
 
   factory UserAuthDTO.fromJson(Map<String, dynamic> json) =>
