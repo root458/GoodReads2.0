@@ -29,4 +29,8 @@ class GoogleSignInCubit extends Cubit<GoogleSignInState> {
       emit(const GoogleSignInState.error(['An unexepected error occured']));
     }
   }
+
+  Future<void> googleLogout() async {
+    await _authService.logout();
+  }
 }

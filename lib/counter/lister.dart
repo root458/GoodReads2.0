@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:good_reads_app/authpages/google_sigin_in_cubit/google_sign_in_cubit.dart';
 import 'package:good_reads_app/counter/cubit/get_books_cubit.dart';
 import 'package:good_reads_app/models/_index.dart';
+import 'package:good_reads_app/utils/_index.dart';
 
 class ItemListingPage extends StatefulWidget {
   const ItemListingPage({Key? key}) : super(key: key);
@@ -29,6 +31,36 @@ class _ItemListingPageState extends State<ItemListingPage> {
       ),
       appBar: AppBar(
         title: const Text('Welcome'),
+        actions: [
+          PopupMenuButton(
+            color: TrainingTheme.white,
+            itemBuilder: (context) => [
+              PopupMenuItem<int>(
+                value: 0,
+                child: Row(
+                  children: const [
+                    Icon(
+                      Icons.logout,
+                      color: Colors.red,
+                    ),
+                    SizedBox(
+                      width: 7,
+                    ),
+                    Text(
+                      'Logout',
+                      style: TextStyle(
+                        color: Colors.red,
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            ],
+            onSelected: (value) async {
+              // await context.read<GoogleSignInCubit>().googleLogout();
+            },
+          ),
+        ],
       ),
       body: BlocBuilder<GetBooksCubit, GetBooksState>(
         builder: (BuildContext context, GetBooksState state) {

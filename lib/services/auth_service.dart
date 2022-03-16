@@ -52,8 +52,8 @@ class AuthServiceImpl implements AuthService {
 
   @override
   Future<bool> logout() async {
-    _hiveService.clearPrefs();
     await _googleSignIn.signOut();
+    await _hiveService.clearPrefs();
     return true;
   }
 

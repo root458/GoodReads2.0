@@ -2,7 +2,7 @@ part of training_services;
 
 abstract class HiveService {
   Future<void> initBoxes();
-  void clearPrefs();
+  Future<void> clearPrefs();
 
   void persistToken(String token);
   String? retrieveToken();
@@ -20,8 +20,8 @@ class HiveServiceImpl implements HiveService {
   }
 
   @override
-  void clearPrefs() {
-    Hive.box<dynamic>(TrainingConfig.instance!.values.authBox)
+  Future<void> clearPrefs() async {
+    await Hive.box<dynamic>(TrainingConfig.instance!.values.authBox)
         .deleteAll(<String>[
       'access_token',
       'profile',
