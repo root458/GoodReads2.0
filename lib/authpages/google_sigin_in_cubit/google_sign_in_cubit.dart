@@ -27,7 +27,7 @@ class GoogleSignInCubit extends Cubit<GoogleSignInState> {
       // Persist token
       _hiveService.persistToken(_result.accessToken);
 
-      emit(GoogleSignInState.loaded(_result));
+      emit(const GoogleSignInState.loaded());
     } on Failure catch (err) {
       emit(GoogleSignInState.error(['Failed', err.message]));
     } catch (e) {

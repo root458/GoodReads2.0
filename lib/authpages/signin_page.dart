@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:good_reads_app/authpages/google_sigin_in_cubit/google_sign_in_cubit.dart';
-import 'package:good_reads_app/services/_index.dart';
 import 'package:good_reads_app/utils/_index.dart';
 
 class SignInPage extends StatelessWidget {
@@ -57,11 +56,7 @@ class SignInPage extends StatelessWidget {
                         return state.when(
                           initial: () => const Text('Sign In'),
                           loading: () => const Text('Loading...'),
-                          loaded: (userAuthDTO) {
-                            HiveServiceImpl()
-                                .persistToken(userAuthDTO.accessToken);
-                            return const Text('Success');
-                          },
+                          loaded: () => const Text('Success'),
                           error: (errorLst) => const Text('Try again'),
                         );
                       },
