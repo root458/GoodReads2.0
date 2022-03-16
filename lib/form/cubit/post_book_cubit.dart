@@ -15,10 +15,6 @@ class PostBookCubit extends Cubit<PostBookState> {
 
   late BookApiService _bookApiService;
 
-  void loadFormPage() {
-    emit(const PostBookState.initial());
-  }
-
   Future postBooks({
     required String author,
     required String title,
