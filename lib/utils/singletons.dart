@@ -19,6 +19,7 @@ class Singletons {
         BlocProvider<GoogleSignInCubit>(
           create: (context) => GoogleSignInCubit(
             authService: _authService,
+            hiveService: _hiveService,
           ),
         ),
       ];

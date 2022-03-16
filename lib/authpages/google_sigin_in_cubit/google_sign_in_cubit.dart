@@ -10,16 +10,22 @@ part 'google_sign_in_cubit.freezed.dart';
 class GoogleSignInCubit extends Cubit<GoogleSignInState> {
   GoogleSignInCubit({
     required AuthService authService,
+    required HiveService hiveService,
   }) : super(const GoogleSignInState.initial()) {
     _authService = authService;
+    _hiveService = hiveService;
   }
 
   late AuthService _authService;
+  late HiveService _hiveService;
 
   Future<void> signInWithGoogle() async {
     emit(const GoogleSignInState.loading());
     try {
       final _result = await _authService.signInWithGoogle();
+
+      // Persist token
+      _hiveService.persistToken(_result.accessToken);
 
       emit(GoogleSignInState.loaded(_result));
     } on Failure catch (err) {
