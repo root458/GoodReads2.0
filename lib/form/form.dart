@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:good_reads_app/form/cubit/post_book_cubit.dart';
-import 'package:good_reads_app/models/_index.dart';
 
 class FormPage extends StatefulWidget {
   const FormPage({Key? key}) : super(key: key);
@@ -115,11 +114,9 @@ class _FormWidgetState extends State<FormWidget> {
               onPressed: () {
                 if (_formkey.currentState!.validate()) {
                   widget.postBookCubit.postBooks(
-                    BookItemDTO(
-                      author: author,
-                      title: title,
-                      year: int.parse(year),
-                    ),
+                    author: author,
+                    title: title,
+                    year: year,
                   );
                 }
               },

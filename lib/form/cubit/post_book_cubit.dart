@@ -19,10 +19,19 @@ class PostBookCubit extends Cubit<PostBookState> {
     emit(const PostBookState.initial());
   }
 
-  Future postBooks(BookItemDTO bookItemDTO) async {
+  Future postBooks({
+    required String author,
+    required String title,
+    required String year,
+  }) async {
     emit(const PostBookState.sending());
     try {
-      final _result = await _bookApiService.addItem(bookItemDTO: bookItemDTO);
+      final _result = await _bookApiService.addItem(
+          bookItemDTO: BookItemDTO(
+        author: author,
+        title: title,
+        year: int.parse(year),
+      ),);
       emit(PostBookState.sent(_result));
     } on Failure catch (err) {
       emit(PostBookState.error(err.message));
