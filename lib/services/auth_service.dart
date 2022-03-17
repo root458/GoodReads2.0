@@ -9,7 +9,8 @@ abstract class AuthService {
 }
 
 class AuthServiceImpl implements AuthService {
-  AuthServiceImpl({required HiveService hiveService}) {
+  AuthServiceImpl(
+      {required HiveService hiveService,}) {
     _hiveService = hiveService;
   }
 

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:good_reads_app/authpages/google_sigin_in_cubit/google_sign_in_cubit.dart';
 import 'package:good_reads_app/counter/cubit/get_books_cubit.dart';
 import 'package:good_reads_app/models/_index.dart';
 import 'package:good_reads_app/utils/_index.dart';
@@ -56,7 +57,7 @@ class _ItemListingPageState extends State<ItemListingPage> {
               ),
             ],
             onSelected: (value) async {
-              // await context.read<GoogleSignInCubit>().googleLogout();
+              await context.read<GoogleSignInCubit>().googleLogout();
             },
           ),
         ],
