@@ -2,7 +2,8 @@ part of training_utils;
 
 class TrainingRouter {
   static const String decisionRoute = '/';
-  static const String listingRoute = '/listing';
+  static const String authRoute = '/auth';
+  static const String homeRoute = '/home';
   static const String formRoute = '/form';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -13,7 +14,11 @@ class TrainingRouter {
         return _route(
           const DecisionPage(),
         );
-      case listingRoute:
+      case authRoute:
+        return _route(
+          const SignInPage(),
+        );
+      case homeRoute:
         return _route(
           const ItemListingPage(),
         );

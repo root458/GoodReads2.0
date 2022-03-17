@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:good_reads_app/authpages/signin_page.dart';
 import 'package:good_reads_app/counter/lister.dart';
@@ -19,14 +20,39 @@ class DecisionPage extends StatelessWidget {
           final _accToken = HiveServiceImpl().retrieveToken();
 
           if (_accToken != null) {
-            return const ItemListingPage();
+            _redirectToPage(
+              context,
+              const ItemListingPage(),
+              routeName: TrainingRouter.homeRoute,
+            );
           } else {
-            return const SignInPage();
+            _redirectToPage(
+              context,
+              const SignInPage(),
+              routeName: TrainingRouter.authRoute,
+            );
           }
-        } else {
-          return const SignInPage();
         }
+        return const Scaffold(
+          body: Center(
+            child: Text('Welcome'),
+          ),
+        );
       },
     );
+  }
+
+  void _redirectToPage(BuildContext context, Widget page, {String? routeName}) {
+    WidgetsBinding.instance?.addPostFrameCallback((_) {
+      final _newRoute = CupertinoPageRoute<dynamic>(
+        builder: (BuildContext context) => page,
+        settings: RouteSettings(name: routeName),
+      );
+
+      Navigator.of(context).pushAndRemoveUntil<dynamic>(
+        _newRoute,
+        ModalRoute.withName(TrainingRouter.decisionRoute),
+      );
+    });
   }
 }

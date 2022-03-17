@@ -34,7 +34,7 @@ class Training extends StatelessWidget {
           GlobalMaterialLocalizations.delegate,
         ],
         supportedLocales: AppLocalizations.supportedLocales,
-        // initialRoute: TrainingRouter.decisionRoute,
+        initialRoute: TrainingRouter.decisionRoute,
         onGenerateRoute: TrainingRouter.generateRoute,
       ),
     );
