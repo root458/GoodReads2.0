@@ -58,6 +58,10 @@ class _ItemListingPageState extends State<ItemListingPage> {
             ],
             onSelected: (value) async {
               await context.read<GoogleSignInCubit>().googleLogout();
+              Navigator.pushReplacementNamed(
+                context,
+                TrainingRouter.authRoute,
+              );
             },
           ),
         ],

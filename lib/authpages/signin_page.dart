@@ -56,7 +56,13 @@ class SignInPage extends StatelessWidget {
                         return state.when(
                           initial: () => const Text('Sign In'),
                           loading: () => const Text('Loading...'),
-                          loaded: () => const Text('Success'),
+                          loaded: () {
+                            Navigator.pushReplacementNamed(
+                              context,
+                              TrainingRouter.homeRoute,
+                            );
+                            return const Text('Sign In');
+                          },
                           error: (errorLst) => const Text('Try again'),
                         );
                       },
