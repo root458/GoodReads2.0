@@ -51,16 +51,22 @@ class SignInPage extends StatelessWidget {
                       fixedSize:
                           Size(MediaQuery.of(context).size.width * .5, 50),
                     ),
-                    child: BlocBuilder<GoogleSignInCubit, GoogleSignInState>(
+                    child: BlocConsumer<GoogleSignInCubit, GoogleSignInState>(
+                      listener: (contextOne, state) {
+                        state.when(
+                            initial: () {},
+                            loading: () {},
+                            loaded: () => Navigator.pushReplacementNamed(
+                                  contextOne,
+                                  TrainingRouter.homeRoute,
+                                ),
+                            error: (lst) {},);
+                      },
                       builder: (context, state) {
                         return state.when(
                           initial: () => const Text('Sign In'),
                           loading: () => const Text('Loading...'),
                           loaded: () {
-                            Navigator.pushReplacementNamed(
-                              context,
-                              TrainingRouter.homeRoute,
-                            );
                             return const Text('Sign In');
                           },
                           error: (errorLst) => const Text('Try again'),
